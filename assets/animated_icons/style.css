@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 70%;
+  height: 70%;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+}
+
+.line-container {
+  height: 4px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.line {
+  height: 100%;
+  position: absolute;
+  background-color: white;
+}
+
+.line-container:nth-child(1), .line-container:nth-child(12) {
+  width: 20%;
+}
+
+.line-container:nth-child(2), .line-container:nth-child(11) {
+  width: 55%;
+}
+
+.line-container:nth-child(3), .line-container:nth-child(10) {
+  width: 74%;
+}
+
+.line-container:nth-child(4), .line-container:nth-child(9) {
+  width: 87%;
+}
+
+.line-container:nth-child(5), .line-container:nth-child(8) {
+  width: 94%;
+}
+
+.line-container:nth-child(6), .line-container:nth-child(7) {
+  width: 100%;
+}
+
+.line-1 {
+  animation-delay: 0.5s;
+  box-shadow: 0 0 30px #FF0000, 0 0 15px #FF0000, inset 0 0 30px #FF0000;
+}
+
+.line-2 {
+  animation-delay: 1s;
+  box-shadow: 0 0 30px #FF4B14, 0 0 15px #FF4B14, inset 0 0 30px #FF4B14;
+}
+
+.line-3 {
+  animation-delay: 1.5s;
+  box-shadow: 0 0 30px #FFCB21, 0 0 15px #FFCB21, inset 0 0 30px #FFCB21;
+}
+
+.line-4 {
+  animation-delay: 2s;
+  box-shadow: 0 0 30px #FFED24, 0 0 15px #FFED24, inset 0 0 30px #FFED24;
+}
+
+.line-5 {
+  animation-delay: 2.5s;
+  box-shadow: 0 0 30px #24FF45, 0 0 15px #24FF45, inset 0 0 30px #24FF45;
+}
+
+.line-6 {
+  animation-delay: 3s;
+  box-shadow: 0 0 30px #14DB32, 0 0 15px #14DB32, inset 0 0 30px #14DB32;
+}
+
+.line-7 {
+  animation-delay: 3.5s;
+  box-shadow: 0 0 30px #24FFB6, 0 0 15px #24FFB6, inset 0 0 30px #24FFB6;
+}
+
+.line-8 {
+  animation-delay: 4s;
+  box-shadow: 0 0 30px #24FFFB, 0 0 15px #24FFFB, inset 0 0 30px #24FFFB;
+}
+
+.line-9 {
+  animation-delay: 4.5s;
+  box-shadow: 0 0 30px #24ABFF, 0 0 15px #24ABFF, inset 0 0 30px #24ABFF;
+}
+
+.line-10 {
+  animation-delay: 5s;
+  box-shadow: 0 0 30px #5324FF, 0 0 15px #5324FF, inset 0 0 30px #5324FF;
+}
+
+.line-11 {
+  animation-delay: 5.5s;
+  box-shadow: 0 0 30px #8724FF, 0 0 15px #8724FF, inset 0 0 30px #8724FF;
+}
+
+.line-12 {
+  animation-delay: 6s;
+  box-shadow: 0 0 30px #FC4CB9, 0 0 15px #FC4CB9, inset 0 0 30px #FC4CB9;
+}
+
+.appear-left {
+  left: 0;
+  width: 0%;
+  animation-name: appear-left;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes appear-left {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.disappear-right {
+  right: 0;
+  width: 100%;
+  animation-name: disappear-right;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes disappear-right {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+.appear-pop {
+  opacity: 0;
+  width: 100%;
+  animation-name: appear-pop;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes appear-pop {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.disappear-pop {
+  opacity: 1;
+  width: 100%;
+  animation-name: disappear-pop;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes disappear-pop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.appear-middle {
+  left: 50%;
+  width: 0%;
+  animation-name: appear-middle;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes appear-middle {
+  0% {
+    width: 0%;
+    left: 50%;
+  }
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+.disappear-middle {
+  left: 0;
+  width: 100%;
+  animation-name: disappear-middle;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+@keyframes disappear-middle {
+  0% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0%;
+    left: 50%;
+  }
+}

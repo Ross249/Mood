@@ -1,0 +1,51 @@
+{
+  "cli": {
+    "version": ">= 0.60.0",
+    "promptToConfigurePushNotifications": true
+  },
+  "build": {
+    "preview_apk": {
+      "developmentClient": true,
+      "android": {
+        "buildType": "apk",
+        "distribution": "internal"
+      },
+      "env": {
+        "ANDROID_SDK_ROOT": "~/android"
+      },
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    },
+    "preview_aab": {
+      "env": {
+        "ANDROID_SDK_ROOT": "~/android"
+      },
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    },
+    "preview": {
+      "android": {
+        "buildType": "apk",
+        "distribution": "internal"
+      },
+      "env": {
+        "ANDROID_SDK_ROOT": "~/android"
+      },
+      "ios": {
+        "developmentClient": true,
+        "simulator": true,
+        "resourceClass": "m-medium"
+      }
+    },
+    "production": {
+      "ios": {
+        "resourceClass": "m-medium"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

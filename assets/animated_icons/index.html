@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title> </title>
+    <!-- <link rel="stylesheet" href="./style.css" /> -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      .container {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        width: 500px;
+        height: 440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .container:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        width: 70%;
+        height: 70%;
+        background-color: rgba(0, 0, 0, 0);
+        border-radius: 50%;
+      }
+
+      .line-container {
+        height: 4px;
+        margin: 0 auto;
+        margin-bottom: 14px;
+        position: relative;
+      }
+
+      .line {
+        height: 100%;
+        position: absolute;
+        background-color: white;
+      }
+
+      .line-container:nth-child(1),
+      .line-container:nth-child(12) {
+        width: 20%;
+      }
+
+      .line-container:nth-child(2),
+      .line-container:nth-child(11) {
+        width: 55%;
+      }
+
+      .line-container:nth-child(3),
+      .line-container:nth-child(10) {
+        width: 74%;
+      }
+
+      .line-container:nth-child(4),
+      .line-container:nth-child(9) {
+        width: 87%;
+      }
+
+      .line-container:nth-child(5),
+      .line-container:nth-child(8) {
+        width: 94%;
+      }
+
+      .line-container:nth-child(6),
+      .line-container:nth-child(7) {
+        width: 100%;
+      }
+
+      .line-1 {
+        animation-delay: 0.5s;
+        box-shadow: 0 0 30px #ff0000, 0 0 15px #ff0000, inset 0 0 30px #ff0000;
+      }
+
+      .line-2 {
+        animation-delay: 1s;
+        box-shadow: 0 0 30px #ff4b14, 0 0 15px #ff4b14, inset 0 0 30px #ff4b14;
+      }
+
+      .line-3 {
+        animation-delay: 1.5s;
+        box-shadow: 0 0 30px #ffcb21, 0 0 15px #ffcb21, inset 0 0 30px #ffcb21;
+      }
+
+      .line-4 {
+        animation-delay: 2s;
+        box-shadow: 0 0 30px #ffed24, 0 0 15px #ffed24, inset 0 0 30px #ffed24;
+      }
+
+      .line-5 {
+        animation-delay: 2.5s;
+        box-shadow: 0 0 30px #24ff45, 0 0 15px #24ff45, inset 0 0 30px #24ff45;
+      }
+
+      .line-6 {
+        animation-delay: 3s;
+        box-shadow: 0 0 30px #14db32, 0 0 15px #14db32, inset 0 0 30px #14db32;
+      }
+
+      .line-7 {
+        animation-delay: 3.5s;
+        box-shadow: 0 0 30px #24ffb6, 0 0 15px #24ffb6, inset 0 0 30px #24ffb6;
+      }
+
+      .line-8 {
+        animation-delay: 4s;
+        box-shadow: 0 0 30px #24fffb, 0 0 15px #24fffb, inset 0 0 30px #24fffb;
+      }
+
+      .line-9 {
+        animation-delay: 4.5s;
+        box-shadow: 0 0 30px #24abff, 0 0 15px #24abff, inset 0 0 30px #24abff;
+      }
+
+      .line-10 {
+        animation-delay: 5s;
+        box-shadow: 0 0 30px #5324ff, 0 0 15px #5324ff, inset 0 0 30px #5324ff;
+      }
+
+      .line-11 {
+        animation-delay: 5.5s;
+        box-shadow: 0 0 30px #8724ff, 0 0 15px #8724ff, inset 0 0 30px #8724ff;
+      }
+
+      .line-12 {
+        animation-delay: 6s;
+        box-shadow: 0 0 30px #fc4cb9, 0 0 15px #fc4cb9, inset 0 0 30px #fc4cb9;
+      }
+
+      .appear-left {
+        left: 0;
+        width: 0%;
+        animation-name: appear-left;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes appear-left {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      .disappear-right {
+        right: 0;
+        width: 100%;
+        animation-name: disappear-right;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes disappear-right {
+        0% {
+          width: 100%;
+        }
+        100% {
+          width: 0%;
+        }
+      }
+      .appear-pop {
+        opacity: 0;
+        width: 100%;
+        animation-name: appear-pop;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes appear-pop {
+        0%,
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .disappear-pop {
+        opacity: 1;
+        width: 100%;
+        animation-name: disappear-pop;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes disappear-pop {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .appear-middle {
+        left: 50%;
+        width: 0%;
+        animation-name: appear-middle;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes appear-middle {
+        0% {
+          width: 0%;
+          left: 50%;
+        }
+        100% {
+          width: 100%;
+          left: 0;
+        }
+      }
+      .disappear-middle {
+        left: 0;
+        width: 100%;
+        animation-name: disappear-middle;
+        animation-duration: 0.4s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+      }
+
+      @keyframes disappear-middle {
+        0% {
+          width: 100%;
+          left: 0;
+        }
+        100% {
+          width: 0%;
+          left: 50%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="line-container">
+        <div class="line line-1 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-2 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-3 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-4 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-5 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-6 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-7 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-8 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-9 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-10 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div class="line line-11 appear-left"></div>
+      </div>
+      <div class="line-container">
+        <div id="last-line" class="line line-12 appear-left"></div>
+      </div>
+    </div>
+    <script>
+      var arr = document.getElementsByClassName("line");
+
+      function disappearRight() {
+        el.removeEventListener("animationend", disappearRight);
+        el.addEventListener("animationend", appearPop);
+
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.remove("appear-left");
+          arr[i].classList.add("disappear-right");
+        }
+      }
+
+      function appearPop() {
+        el.removeEventListener("animationend", appearPop);
+        el.addEventListener("animationend", disappearPop);
+
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.remove("disappear-right");
+          arr[i].classList.add("appear-pop");
+        }
+      }
+
+      function disappearPop() {
+        el.removeEventListener("animationend", disappearPop);
+        el.addEventListener("animationend", appearMid);
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.remove("appear-pop");
+          arr[i].classList.add("disappear-pop");
+        }
+      }
+
+      function appearMid() {
+        el.removeEventListener("animationend", appearMid);
+        el.addEventListener("animationend", disappearMid);
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.remove("disappear-pop");
+          arr[i].classList.add("appear-middle");
+        }
+      }
+
+      function disappearMid() {
+        el.removeEventListener("animationend", disappearMid);
+        el.addEventListener("animationend", appearLeft);
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.remove("appear-middle");
+          arr[i].classList.add("disappear-middle");
+        }
+      }
+
+      function appearLeft() {
+        el.removeEventListener("animationend", appearLeft);
+        el.addEventListener("animationend", disappearRight);
+        for (var i = 0; i < arr.length; i++) {
+          arr[i].classList.remove("disappear-middle");
+          arr[i].classList.add("appear-left");
+        }
+      }
+
+      var el = document.querySelector("#last-line");
+      el.addEventListener("animationend", disappearRight);
+    </script>
+  </body>
+</html>

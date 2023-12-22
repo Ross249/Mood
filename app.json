@@ -1,0 +1,91 @@
+{
+  "expo": {
+    "name": "MOOD Lofi Musics",
+    "slug": "mood",
+    "version": "1.0.0",
+    "owner": "jimmyluo",
+    "orientation": "portrait",
+    "scheme": [
+      "mood",
+      "fb1779948852457246"
+    ],
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash1.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000"
+    },
+    "assetBundlePatterns": [
+      "assets/**",
+      "**/*"
+    ],
+    "ios": {
+      "usesAppleSignIn": true,
+      "bundleIdentifier": "com.mood.moodmusics",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIBackgroundModes": [
+          "audio",
+          "fetch",
+          "processing"
+        ],
+        "BGTaskSchedulerPermittedIdentifiers": "com.mood.moodmusics",
+        "NSCameraUsageDescription": "We needs camera permissions to allow you to upload profile photos.",
+        "NSPhotoLibraryAddUsageDescription": "We needs photo library permissions to allow you to upload profile images.",
+        "NSPhotoLibraryUsageDescription": "We needs photo library permissions to allow you to upload profile images.",
+        "LSApplicationQueriesSchemes": [
+          "itms-apps"
+        ],
+        "CFBundleDevelopmentRegion": "en"
+      },
+      "buildNumber": "27"
+    },
+    "android": {
+      "package": "com.mood.moodmusics",
+      "versionCode": 27
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "packagerOpts": {
+      "assetExts": [
+        "html"
+      ]
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c36b5ae6-48c6-40dc-aa5d-393e88255e24"
+      }
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "32.0.0"
+          },
+          "ios": {
+            "useFrameworks": "static",
+            "deploymentTarget": "13.0"
+          }
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.mood.moodmusics",
+          "enableGooglePay": true
+        }
+      ],
+      "expo-apple-authentication",
+      "@config-plugins/react-native-google-cast"
+    ]
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-8122558019627328~9395004329",
+    "ios_app_id": "ca-app-pub-8122558019627328~6489601390"
+  }
+}
